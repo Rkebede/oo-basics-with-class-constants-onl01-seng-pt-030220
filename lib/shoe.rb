@@ -11,7 +11,7 @@ class Shoe
   
 
   def BRANDS
-    @brands = BRANDS.uniq
+    @brands = BRANDS.uniq(&:size)
   end 
 
   def cobble
