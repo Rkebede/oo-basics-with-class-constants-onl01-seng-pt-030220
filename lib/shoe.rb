@@ -4,16 +4,13 @@ class Shoe
 
  BRANDS = [ ] 
  
- def initialize(brand)
+  def initialize(brand)
     @brand = brand
     BRANDS << brand
+    BRANDS = BRANDS.uniq
   end
   
-
-  # def BRANDS
-  #   brands = BRANDS.uniq(&:size)
-  # end 
-
+  
   def cobble
     self.condition = "new"
     puts "Your shoe is as good as new!"
